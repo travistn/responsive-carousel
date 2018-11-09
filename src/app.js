@@ -8,6 +8,7 @@ export default class App extends React.Component {
       currentIndex: 0
     }
     this.handleClick = this.handleClick.bind(this)
+    this.moveImage = this.moveImage.bind(this)
   }
   handleClick(direction) {
     const { image } = this.props
@@ -51,6 +52,11 @@ export default class App extends React.Component {
         currentIndex: 0
       })
     }
+  }
+  componentDidMount() {
+    setInterval(() => {
+      this.moveImage()
+    }, 5000)
   }
   render() {
     const currentIndex = this.state.currentIndex
