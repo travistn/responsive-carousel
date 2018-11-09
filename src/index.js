@@ -12,6 +12,11 @@ const images = [
     src: 'https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/%27Adam%27s_Creation_Sistine_Chapel_ceiling%27_by_Michelangelo_JBU33cut.jpg/600px-%27Adam%27s_Creation_Sistine_Chapel_ceiling%27_by_Michelangelo_JBU33cut.jpg',
     title: 'The Creation of Adam',
     caption: 'The Creation of Adam was painted by Michelangelo between 1508 - 1512.'
+  },
+  {
+    src: 'http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_640/images/live/p0/61/2q/p0612qt6.jpg',
+    title: 'Girl with a Pearl Earring',
+    caption: 'Girl with a Pearl Earring was painted by Johannes Vermeer in 1665.'
   }
 ]
 
