@@ -38,6 +38,20 @@ export default class App extends React.Component {
         }
     }
   }
+  moveImage() {
+    const index = this.state.currentIndex
+    const { image } = this.props
+    if (index !== image.length - 1) {
+      this.setState({
+        currentIndex: index + 1
+      })
+    }
+    if (index === image.length - 1) {
+      this.setState({
+        currentIndex: 0
+      })
+    }
+  }
   render() {
     const currentIndex = this.state.currentIndex
     const { image } = this.props
