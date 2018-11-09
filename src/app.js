@@ -1,13 +1,6 @@
 import React from 'react'
 import { Container } from 'reactstrap'
 
-const styles = {
-  image: {
-    width: '250px',
-    height: '150px'
-  }
-}
-
 export default class App extends React.Component {
   constructor(props) {
     super(props)
@@ -55,13 +48,13 @@ export default class App extends React.Component {
           <h2 className="mt-5">Famous Paintings</h2>
           <div>
             <span>
-              <i className="far fa-2x fa-arrow-alt-circle-left mr-2"
+              <i className="far fa-arrow-alt-circle-left fa-2x mr-2 arrow"
                 onClick={() => this.handleClick('left')}></i>
-              <img className="mt-5" src={images[currentIndex].src} style={styles.image}></img>
-              <i className="far fa-2x fa-arrow-alt-circle-right ml-2"
+              <img className="mt-5 img" src={images[currentIndex].src}></img>
+              <i className="far fa-arrow-alt-circle-right fa-2x ml-2 arrow"
                 onClick={() => this.handleClick('right')}></i>
             </span>
-            <div className="text-center">
+            <div>
               <span>
                 {
                   image.map((item, index) =>
@@ -75,7 +68,7 @@ export default class App extends React.Component {
                 }
               </span>
             </div>
-            <h4 className="mt-4">{images[currentIndex].title}</h4>
+            <h4 className="mt-3">{images[currentIndex].title}</h4>
             <p className="mt-3">{images[currentIndex].caption} </p>
           </div>
         </div>
