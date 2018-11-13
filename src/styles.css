@@ -6,7 +6,8 @@ body {
   font-size: 0.8rem;
   margin: 1rem;
   margin-top: 1.5rem;
-  border-radius: 60%
+  border-radius: 100%;
+  cursor: pointer;
 }
 
 @media (min-width: 300px) {

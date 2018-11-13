@@ -68,28 +68,28 @@ export default class App extends React.Component {
           <h2 className="mt-5">Famous Paintings</h2>
           <div>
             <span>
-              <i className="far fa-arrow-alt-circle-left fa-2x mr-2 arrow"
+              <i className="far fa-arrow-alt-circle-left fa-2x mr-2"
                 onClick={() => this.handleClick('left')}></i>
               <img className="mt-5 img" src={images[currentIndex].src}></img>
-              <i className="far fa-arrow-alt-circle-right fa-2x ml-2 arrow"
+              <i className="far fa-arrow-alt-circle-right fa-2x ml-2"
                 onClick={() => this.handleClick('right')}></i>
             </span>
-            <div>
-              <span>
-                {
-                  image.map((item, index) =>
-                    <i
-                      key={item.src}
-                      className="far fa-circle circle"
-                      style={(currentIndex === index)
-                        ? {background: 'black'}
-                        : {background: 'none'}}></i>
-                  )
-                }
-              </span>
-            </div>
             <h4 className="mt-3">{images[currentIndex].title}</h4>
             <p className="mt-3">{images[currentIndex].caption} </p>
+            <div>
+               <span>
+                 {
+                   image.map((item, index) =>
+                     <i
+                       key={item.src}
+                       className="far fa-circle circle"
+                       style={(currentIndex === index)
+                         ? {background: 'white'}
+                         : {background: 'none'}}></i>
+                   )
+                 }
+               </span>
+             </div>
           </div>
         </div>
       </Container>
