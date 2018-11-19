@@ -37,3 +37,7 @@ body {
     max-height: 350px
   }
 }
+
+.carousel-image:hover {
+  opacity: 0.7;
+}

@@ -9,6 +9,7 @@ export default class App extends React.Component {
     }
     this.handleClick = this.handleClick.bind(this)
     this.moveImage = this.moveImage.bind(this)
+    this.pauseImage = this.pauseImage.bind(this)
   }
   handleClick(direction) {
     const { image } = this.props
@@ -53,6 +54,9 @@ export default class App extends React.Component {
       })
     }
   }
+  pauseImage() {
+    clearInterval(this.state.currentIndex)
+  }
   componentDidMount() {
     setInterval(() => {
       this.moveImage()
@@ -70,7 +74,9 @@ export default class App extends React.Component {
             <span>
               <i className="far fa-arrow-alt-circle-left fa-2x mr-2"
                 onClick={() => this.handleClick('left')}></i>
-              <img className="mt-5 img" src={images[currentIndex].src}></img>
+              <img className="mt-5 img carousel-image"
+                src={images[currentIndex].src}
+                onMouseEnter={() => this.pauseImage()}></img>
               <i className="far fa-arrow-alt-circle-right fa-2x ml-2"
                 onClick={() => this.handleClick('right')}></i>
             </span>
